@@ -38,14 +38,4 @@ class Base
 
 		return false;
 	}
-
-	public function escapeStringArgument($argument)
-	{
-		return '"' . addslashes($argument) . '"';
-	}
-
-	public function escapePeer($peer)
-	{
-		return str_replace(' ', '_', $peer);
-	}
 }

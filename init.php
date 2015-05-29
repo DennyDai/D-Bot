@@ -4,9 +4,9 @@ require_once('config.inc.php');
 require_once('functions.php');
 $plugins = [];
 
-if($_GET['from'] != "Dx._Dennx"){
+if($_GET['from'] != BOT_NAME){
 //is group?
-	if ($_GET['to'] == 'Dx._Dennx') {
+	if ($_GET['to'] == BOT_NAME) {
 		$isgroup = false;
 	}else{
 		$isgroup = true;
@@ -17,7 +17,7 @@ if($_GET['from'] != "Dx._Dennx"){
 		$from = $_GET['to'];
 	}else{
 		$from = $_GET['from'];
-		$BOT->exec("msg Denny_Dai ".json_encode($_GET)); //私聊监测
+		$BOT->exec("msg ".escapePeer(OWNER_NAME)." ".json_encode($_GET));
 	}
 
 //load plugins

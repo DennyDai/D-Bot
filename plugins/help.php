@@ -1,7 +1,7 @@
 <?php
-PluginList("help", "查看帮助");
+PluginList("help", "Ask for help");
 if (preg_match("/^".TAG."help$/", $_GET['text'])) {
-	$plugin_list = "欢迎使用来自Dennx.com的TG-BOT";
+	$plugin_list = "Welcome to use TG-BOT From Dennx.com";
 	foreach ($plugins as $value) {
 		$plugin_list .= "\n".$value;
 	}
