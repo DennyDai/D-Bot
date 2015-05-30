@@ -4,9 +4,9 @@ require_once('config.inc.php');
 require_once('functions.php');
 $plugins = [];
 
-if($_GET['from'] != BOT_NAME){
+if($_GET['from'] != escapePeer(BOT_NAME)){
 //is group?
-	if ($_GET['to'] == BOT_NAME) {
+	if ($_GET['to'] == escapePeer(BOT_NAME)) {
 		$isgroup = false;
 	}else{
 		$isgroup = true;
