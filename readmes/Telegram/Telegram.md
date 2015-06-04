@@ -6,6 +6,7 @@ Requirements
 ------------
  - A running [telegram-cli](https://github.com/vysheng/tg/) listening on a unix-socket (`-S`) or a port (`-P`). Needs to be configured (phone-number, etc.) before this progarm runs.
  - php >= 5.3.0
+ - python = 2.7.9
 
 Usage
 -----
@@ -13,9 +14,13 @@ Usage
 ###Setup telegram-cli
 [telegram-cli](https://github.com/vysheng/tg/) needs to be installed.
 
+And
+
+    Change Url to your BOT.php address in [Telegram.py](https://github.com/dennydai/D-bot/blob/master/readmes/Telegram/Telegram.py)
+
 Then
 
-    ./bin/telegram-cli  -s [onmessage.lua Path Here] -dWS /tmp/tg.sck &
+    ./bin/telegram-cli  -s [Telegram.py Path Here] -dWS /tmp/tg.sck &
 
 Finally,
 
