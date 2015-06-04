@@ -20,7 +20,7 @@ And
 
 Then
 
-    ./bin/telegram-cli  -s [Telegram.py Path Here] -dWS /tmp/tg.sck &
+    ./bin/telegram-cli  -Z [Telegram.py Path Here] -dWS /tmp/tg.sck &
 
 Finally,
 
