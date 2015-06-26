@@ -5,6 +5,6 @@ if (preg_match("/^".TAG."tts (.*)$/", $_GET['text'], $matches)) {
 	$file = fopen($_GET['from'].".mp3","w");
 	echo fwrite($file,$mp3);
 	fclose($file);
-	$BOT->exec("send_audio ".$from." /home/wwwroot/1.vps.dennx.com/".$_GET['from'].".mp3");
+	$BOT->send_audio($from, "/home/wwwroot/1.vps.dennx.com/".$_GET['from'].".mp3");
 	//unlink($matches[1].".mp3");
 }

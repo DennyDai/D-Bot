@@ -48,4 +48,9 @@ class Base
         $msg = $this->escapeStringArgument($msg);
         return $this->exec('msg ' . $peer . ' ' . $msg);
     }
+    public function send_audio($peer, $file)
+    {
+        $peer = $this->escapePeer($peer);
+        return $this->exec('send_audio ' . $peer . ' ' . $file);
+    }
 }
