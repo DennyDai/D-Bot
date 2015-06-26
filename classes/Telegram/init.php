@@ -21,14 +21,14 @@ if($_GET['from'] != escapePeer(BOT_NAME)){
 	}
 
 //load plugins
-	$load_plugins = glob(dirname(__FILE__).DIRECTORY_SEPARATOR.'plugins'.DIRECTORY_SEPARATOR.'*.php');
+	$load_plugins = glob(PATH.'plugins'.DIRECTORY_SEPARATOR.'*.php');
 	foreach ($load_plugins as $key => $value) {
-		if ($value == dirname(__FILE__).DIRECTORY_SEPARATOR.'plugins'.DIRECTORY_SEPARATOR.'help.php') {
+		if ($value == PATH.'plugins'.DIRECTORY_SEPARATOR.'help.php') {
 			unset($load_plugins[$key]);
 		}
 	}
 	foreach ($load_plugins as $value) {
 		require_once $value;
 	}
-	require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'plugins'.DIRECTORY_SEPARATOR.'help.php';
+	require_once PATH.'plugins'.DIRECTORY_SEPARATOR.'help.php';
 }

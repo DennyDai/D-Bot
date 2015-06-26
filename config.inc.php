@@ -1,4 +1,5 @@
 <?php
+define('PATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
 define('TAG', '#');
 define('OWNER_NAME', 'Denny Dai');
 define('BOT_NAME', 'Dx. Dennx');

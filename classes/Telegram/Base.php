@@ -1,6 +1,5 @@
 <?php
 namespace DBot\Telegram;
-
 class Base
 {
 	protected $_fp;
@@ -12,17 +11,13 @@ class Base
 		}
 		stream_set_timeout($this->_fp, 1);
 	}
-
 	public function __destruct()
 	{
 		fclose($this->_fp);
 	}
-
-
 	public function exec($command)
 	{
 		fwrite($this->_fp, str_replace("\n", '\n', $command) . PHP_EOL);
-
 		$answer = fgets($this->_fp);
 		if (is_string($answer)) {
 			if (substr($answer, 0, 7) === 'ANSWER ') {
@@ -35,7 +30,6 @@ class Base
 				return true;
 			}
 		}
-
 		return false;
 	}
 }

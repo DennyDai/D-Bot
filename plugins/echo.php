@@ -1,5 +1,5 @@
 <?php
 PluginList("echo", "Echo what you typed.");
 if (preg_match("/^".TAG."echo (.*)$/", $_GET['text'], $matches)) {
-	$BOT->exec("msg ".$from." ".$matches[1]);
+	$BOT->exec("msg ".$from." ".escapeString($matches[1]));
 }
