@@ -1,5 +1,5 @@
 <?php
-namespace DBot\Telegram;
+namespace DBot;
 class Base
 {
 	protected $_fp;
