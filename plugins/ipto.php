@@ -1,6 +1,6 @@
 <?php
 PluginList("ipto", "Change the form of IP address");
-if (preg_match("/^".TAG."ipto (.*)$/", $_GET['text'], $matches)) {
+if (preg_match("/^".TAG."ipto (.*)$/", $text, $matches)) {
 	$arr = explode('.',$matches[1]);
 	$msg = 'IP: '.$arr[0].'.'.$arr[1].'.'.$arr[2].'.'.$arr[3];
 	$msg .= "\nint: ".($arr[0] * pow(256,3) + $arr[1] * pow(256,2) + $arr[2] * 256 + $arr[3]);

@@ -16,4 +16,5 @@ if($_GET['from'] != escapePeer(BOT_NAME)){
 		$BOT->exec("msg ".escapePeer(OWNER_NAME)." ".json_encode($_GET));
 	}
 
+	$text = $_GET['text'];
 }
