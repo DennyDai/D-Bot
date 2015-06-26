@@ -32,4 +32,20 @@ class Base
 		}
 		return false;
 	}
+	public function escapeStringArgument($argument)
+    {
+        return '"' . addslashes($argument) . '"';
+    }
+    public function escapePeer($peer)
+    {
+        return str_replace(' ', '_', $peer);
+    }
+
+
+    public function msg($peer, $msg)
+    {
+        $peer = $this->escapePeer($peer);
+        $msg = $this->escapeStringArgument($msg);
+        return $this->exec('msg ' . $peer . ' ' . $msg);
+    }
 }

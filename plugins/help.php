@@ -6,5 +6,5 @@ if (preg_match("/^".TAG."help$/", $_GET['text'])) {
 		$plugin_list .= "\n".$value;
 	}
 	$plugin_list .= "\n\n".HELP_END;
-	$BOT->exec("msg ".$from." ".escapeString($plugin_list));
+	$BOT->msg($from, $plugin_list);
 }
