@@ -5,8 +5,6 @@ require_once('functions.php');
 $plugins = [];
 
 require(PATH.'classes'.DIRECTORY_SEPARATOR.TYPE.DIRECTORY_SEPARATOR.'Base.php');
-$BOT = new DBot\Base('unix:///tmp/tg.sck');
-
 require_once(PATH.'classes'.DIRECTORY_SEPARATOR.TYPE.DIRECTORY_SEPARATOR.'init.php');
 
 //load plugins
