@@ -1,6 +1,6 @@
 <?php
 PluginList("trans", "translate");
-if (preg_match("/^".TAG."trans (.*)$/", $text, $matches)) {
+if (preg_match("/^".preg_quote(TAG, '/')."trans (.*)$/", $text, $matches)) {
 	$matches = explode(" ", $matches[1], 2);
 	if (!isset($matches[1])) {
 		$to = "en";
