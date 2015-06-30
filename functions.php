@@ -8,6 +8,6 @@ function escapePeer($peer){
 }
 
 function PluginSet($desc){
-        global $plugins,$plugin_name;
-        $plugins[] .= TAG.$plugin_name." ".$desc;
+        global $plugins,$plugin_name,$TAG;
+        $plugins[] .= $TAG.$plugin_name." ".$desc;
 }
