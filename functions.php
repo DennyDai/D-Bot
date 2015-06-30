@@ -7,7 +7,7 @@ function escapePeer($peer){
         return str_replace(' ', '_', $peer);
 }
 
-function PluginList($commands, $name){
-        global $plugins;
-        $plugins[] .= TAG.$commands." ".$name;
+function PluginSet($desc){
+        global $plugins,$plugin_name;
+        $plugins[] .= TAG.$plugin_name." ".$desc;
 }

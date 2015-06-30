@@ -1,6 +1,10 @@
 <?php
-PluginList("help", "Ask for help");
 if (preg_match("/^".preg_quote(TAG, '/')."help$/", $text)) {
+	foreach ($load_plugins as $value) {
+		$plugin_name = substr($value, strlen(PATH.'plugins'.DIRECTORY_SEPARATOR), -4);
+		$lines=file($value);
+		eval($lines[1]);
+	}
 	$plugin_list = HELP_BEGIN."\n";
 	foreach ($plugins as $value) {
 		$plugin_list .= "\n".$value;

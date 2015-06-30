@@ -1,7 +1,6 @@
 <?php
-PluginList("trans", "translate");
-if (preg_match("/^".preg_quote(TAG, '/')."trans (.*)$/", $text, $matches)) {
-	$matches = explode(" ", $matches[1], 2);
+PluginSet("translate");
+	$matches = explode(" ", $plugin_text, 2);
 	if (!isset($matches[1])) {
 		$to = "en";
 		$text = urlencode($matches[0]);
@@ -16,5 +15,3 @@ if (preg_match("/^".preg_quote(TAG, '/')."trans (.*)$/", $text, $matches)) {
 	preg_match("/\[{.*?\}]/is", $trans, $trans_json);
 	$msg = "Result: ".json_decode($trans_json[0],true)[0]["TranslatedText"];
 	$BOT->msg($from, $msg);
-
-}

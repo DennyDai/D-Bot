@@ -1,5 +1,5 @@
 <?php
-define('TYPE', 'Telegram');
+define('TYPE', 'Telegram-Bot');
 define('PATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
 define('TAG', '#');
 define('OWNER_NAME', 'Denny Dai');
