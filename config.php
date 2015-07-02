@@ -9,5 +9,8 @@ $TAGs = array('#','/','!');
 
 
 //For Telegram-Bot
-define('TB_TOKEN', '123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11');
+define('TB_TOKEN', 'YOU_TELEGRAM_BOT_TOKEN_HERE');
 define('TB_API_URL', 'https://api.telegram.org/bot'.TB_TOKEN.'/');
+
+//For plugins
+define('PLUGIN_GITHUB_TOKEN', 'YOU_GITHUB_TOKEN_HERE');
