@@ -34,9 +34,9 @@ function plugin_github_check($title, $check)
 	global $msg;
 	if (!empty($check)) {
 		return @$msg .= "\n".$title.": ".$check;
-	}elseif ($check == true){
+	}elseif ($check === true){
 		return @$msg .= "\n".$title.": True";
-	}elseif ($check == false){
+	}elseif ($check === false){
 		return @$msg .= "\n".$title.": False";
 	}
 }
