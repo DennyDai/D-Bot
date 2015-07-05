@@ -7,7 +7,7 @@ if(filter_var($var[0], FILTER_VALIDATE_IP)){
 	$Netmask_bin = str_repeat('1', $var[1]).str_repeat('0', 32-$var[1]);
 	$Wildcard_bin = strtr($Netmask_bin,"10","01");
 	$msg .= "\nNetmask: ".bindec(substr($Netmask_bin, 0, 8)).'.'.bindec(substr($Netmask_bin, 8, 8)).'.'.bindec(substr($Netmask_bin, 16, 8)).'.'.bindec(substr($Netmask_bin, 24, 8)).' or /'.$var[1];
-	$msg .= "\nWildcard: ".bindec(substr($Wildcard_bin, 0, 8)).'.'.bindec(substr($Wildcard_bin, 8, 8)).'.'.bindec(substr($Wildcard_bin, 16, 8)).'.'.bindec(substr($Wildcard_bin, 24, 8));
+	//$msg .= "\nWildcard: ".bindec(substr($Wildcard_bin, 0, 8)).'.'.bindec(substr($Wildcard_bin, 8, 8)).'.'.bindec(substr($Wildcard_bin, 16, 8)).'.'.bindec(substr($Wildcard_bin, 24, 8));
 
 	$plugin_ipcalc_address_long = ip2long($var[0]);
 	$plugin_ipcalc_nmask_long = ip2long(bindec(substr($Netmask_bin, 0, 8)).'.'.bindec(substr($Netmask_bin, 8, 8)).'.'.bindec(substr($Netmask_bin, 16, 8)).'.'.bindec(substr($Netmask_bin, 24, 8)));
@@ -28,11 +28,11 @@ if(filter_var($var[0], FILTER_VALIDATE_IP)){
 
 
 
-	$msg .= "\nNetwork: ".$plugin_ipcalc_net.'/'.$var[1];
+	$msg .= "\nNetwork: ".$plugin_ipcalc_net;
 	$msg .= "\nBroadcast: ".$plugin_ipcalc_broadcast;
 	$msg .= "\nHostMin: ".long2ip($plugin_ipcalc_first);
 	$msg .= "\nHostMax: ".long2ip($plugin_ipcalc_last);
-	$msg .= "\nHosts/Net: ".($plugin_ipcalc_hosts + 1);
+	$msg .= "\nHosts/Net: ".($plugin_ipcalc_hosts + 2);
 
 	$BOT->msg($plugin_sendto, $msg);
 }else{
