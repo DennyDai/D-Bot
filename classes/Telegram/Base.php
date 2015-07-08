@@ -1,5 +1,4 @@
 <?php
-namespace DBot;
 class Base
 {
 	protected $_fp;

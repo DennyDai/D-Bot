@@ -24,6 +24,11 @@ require_once(PATH.'classes'.DIRECTORY_SEPARATOR.TYPE.DIRECTORY_SEPARATOR.'init.p
 				$plugin_sendto = $from;
 				require_once $value;
 				break;
+			}elseif (preg_match("/^(".preg_quote($TAG, '/').$plugin_name.")|(".preg_quote($TAG, '/').$plugin_name.preg_quote('@').BOT_NAME.")$/", $text)) {
+				$plugin_text = $matches[2];
+				$plugin_sendto = $from;
+				require_once $value;
+				break;
 			}
 		}
 	}

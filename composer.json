@@ -1,0 +1,13 @@
+{
+    "name": "dennydai/D-bot",
+    "description": "A chat bot written in PHP",
+    "authors": [
+        {
+            "name": "dennydai",
+            "email": "i@daihan.cn"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+    }
+}

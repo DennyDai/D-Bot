@@ -1,5 +1,5 @@
 <?php
-$BOT = new DBot\Base('unix:///tmp/tg.sck');
+$BOT = new Base('unix:///tmp/tg.sck');
 if($_GET['from'] != escapePeer(BOT_NAME)){
 //is group?
 	if ($_GET['to'] == escapePeer(BOT_NAME)) {

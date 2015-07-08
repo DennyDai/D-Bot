@@ -1,5 +1,5 @@
 <?php
-$BOT = new DBot\Base;
+$BOT = new Base;
 $GET = json_decode(file_get_contents("php://input"),true);
 
 //is group?

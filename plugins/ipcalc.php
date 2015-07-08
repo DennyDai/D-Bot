@@ -32,7 +32,7 @@ if(filter_var($var[0], FILTER_VALIDATE_IP)){
 	$msg .= "\nBroadcast: ".$plugin_ipcalc_broadcast;
 	$msg .= "\nHostMin: ".long2ip($plugin_ipcalc_first);
 	$msg .= "\nHostMax: ".long2ip($plugin_ipcalc_last);
-	$msg .= "\nHosts/Net: ".($plugin_ipcalc_hosts + 2);
+	$msg .= "\nTotal num: ".($plugin_ipcalc_hosts + 3);
 
 	$BOT->msg($plugin_sendto, $msg);
 }else{
