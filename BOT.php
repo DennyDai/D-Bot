@@ -15,7 +15,6 @@ require_once(PATH.'classes'.DIRECTORY_SEPARATOR.TYPE.DIRECTORY_SEPARATOR.'init.p
 			unset($load_plugins[$key]);
 		}
 	}
-
 	foreach ($TAGs as $TAG) {
 		foreach ($load_plugins as $value) {
 			$plugin_name = substr($value, strlen(PATH.'plugins'.DIRECTORY_SEPARATOR), -4);
