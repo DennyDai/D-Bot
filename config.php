@@ -15,5 +15,5 @@ define('TB_API_URL', 'https://api.telegram.org/bot'.TB_TOKEN.'/');
 //For plugins
 define('PLUGIN_GITHUB_TOKEN', 'YOU_GITHUB_TOKEN_HERE');
 
-//For Wechat
+//For Wechat-MP
 define('WC_UserName', 'YOU_WECHAT_USERNAME_HERE');
