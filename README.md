@@ -10,5 +10,3 @@ Supported Chat Tools List
  - ~~[Telegram](https://telegram.org) - [README](https://github.com/dennydai/D-bot/blob/master/readmes/Telegram/Telegram.md)~~
  - [Telegram-Bot](https://core.telegram.org/bots) - [README](#)
  - [Wechat-MP](http://www.wechat.com/) - [README](#)
-
- 
