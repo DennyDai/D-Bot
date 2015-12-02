@@ -9,11 +9,11 @@ $TAGs = array('#','/','!');
 
 
 //For Telegram-Bot
-define('TB_TOKEN', 'YOU_TELEGRAM_BOT_TOKEN_HERE');
+define('TB_TOKEN', 'YOUR_TELEGRAM_BOT_TOKEN_HERE');
 define('TB_API_URL', 'https://api.telegram.org/bot'.TB_TOKEN.'/');
 
 //For plugins
-define('PLUGIN_GITHUB_TOKEN', 'YOU_GITHUB_TOKEN_HERE');
+define('PLUGIN_GITHUB_TOKEN', 'YOUR_GITHUB_TOKEN_HERE');
 
 //For Wechat-MP
-define('WC_UserName', 'YOU_WECHAT_USERNAME_HERE');
+define('WC_UserName', 'YOUR_WECHAT_USERNAME_HERE');
