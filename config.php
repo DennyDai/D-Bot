@@ -1,5 +1,5 @@
 <?php
-define('TYPE', $_SERVER['QUERY_STRING']);
+define('TYPE', $Pre_Type);
 define('PATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
 define('OWNER_NAME', 'Denny Dai');
 define('BOT_NAME', 'D_bot');

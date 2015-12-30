@@ -1,5 +1,6 @@
 <?php
 //init
+$Pre_Type = substr(substr($_SERVER['PHP_SELF'], strrpos($_SERVER['PHP_SELF'], '/')+1), 0, -4);
 require_once('config.php');
 require_once('functions.php');
 $plugins = array();
