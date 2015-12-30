@@ -1,6 +1,9 @@
 DennyDai/D-Bot
 ==============================
 A PHP Chat Bot
+###STOP SUPPORTED
+###STOP SUPPORTED
+###STOP SUPPORTED
 
 Requirements
 ------------
