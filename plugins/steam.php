@@ -15,7 +15,7 @@ if ($plugin_steam_steamid['response']['success'] == 1){
             "State: ".$personastate."\n".
             $plugin_steam_playing.
             //"Recently Played: ".$plugin_steam_RecentlyPlayedGames['response']['games'][0]['name']."\n".
-            "Last Log Off (UTC +0): ".date("Y-m-d H:i:s", $plugin_steam_PlayerSummaries['response']['players'][0]['lastlogoff'])."\n".
+            "Last Log Off (".date('T')."): ".date("Y-m-d H:i:s", $plugin_steam_PlayerSummaries['response']['players'][0]['lastlogoff'])."\n".
             "Profile URL: ".$plugin_steam_PlayerSummaries['response']['players'][0]['profileurl']."\n".
             "";
 }else{
