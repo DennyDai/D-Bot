@@ -12,11 +12,11 @@ if ($plugin_steam_steamid['response']['success'] == 1){
     if (array_key_exists('gameextrainfo', $plugin_steam_PlayerSummaries['response']['players'][0])){$plugin_steam_playing = "Is Playing: ".$plugin_steam_PlayerSummaries['response']['players'][0]['gameextrainfo']."\n";}
 //personastate
     $msg =  "Personal Name: ".$plugin_steam_PlayerSummaries['response']['players'][0]['personaname']."\n".
-            "State : ".$personastate."\n".
+            "State: ".$personastate."\n".
             $plugin_steam_playing.
             //"Recently Played: ".$plugin_steam_RecentlyPlayedGames['response']['games'][0]['name']."\n".
             "Last Log Off (UTC +0): ".date("Y-m-d H:i:s", $plugin_steam_PlayerSummaries['response']['players'][0]['lastlogoff'])."\n".
-            "Profile URL : ".$plugin_steam_PlayerSummaries['response']['players'][0]['profileurl']."\n".
+            "Profile URL: ".$plugin_steam_PlayerSummaries['response']['players'][0]['profileurl']."\n".
             "";
 }else{
     $msg = "User Not Found :(";
