@@ -4,7 +4,7 @@ define('PATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
 define('OWNER_NAME', 'Denny Dai');
 define('BOT_NAME', 'D_bot');
 define('HELP_BEGIN', "Welcome to use D-BOT");
-define('HELP_END', "GitHub: https://github.com/dennydai/D-bot\nAuthor: @DennyDai");
+define('HELP_END', "GitHub: https://github.com/dennydai/D-Bot\nAuthor: @DennyDai");
 $TAGs = array('#','/','!');
 
 
