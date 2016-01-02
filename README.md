@@ -7,6 +7,6 @@ This project is now in a very early stage since Telegarm is the only supported p
 
 Supported Chat Tools List
 ----------
- - ~~[Telegram](https://telegram.org) - [README](https://github.com/dennydai/D-bot/blob/master/readmes/Telegram/Telegram.md)~~
+ - ~~[Telegram](https://telegram.org) - [README](#)~~
  - [Telegram-Bot](https://core.telegram.org/bots) - [README](https://github.com/dennydai/D-bot/blob/master/readmes/Telegram-Bot/Telegram-Bot.md)
  - [Wechat-MP](http://www.wechat.com/) - [README](#)
