@@ -19,6 +19,6 @@ class Base
 	}
     public function msg($id, $msg)
     {
-        return $this->exec('sendMessage', array('chat_id' =>  $id, 'text' => $msg, 'disable_web_page_preview' => 1));
+        return $this->exec('sendMessage', array('chat_id' =>  $id, 'text' => $msg, 'reply_to_message_id' => MSGID, 'disable_web_page_preview' => 1));
     }
 }
