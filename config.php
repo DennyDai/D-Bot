@@ -1,16 +1,16 @@
 <?php
 define('TYPE', $Pre_Type);
 define('PATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
-define('OWNER_NAME', 'Denny Dai');
-define('BOT_NAME', 'D_bot');
-define('HELP_BEGIN', "Welcome to use D-BOT");
-define('HELP_END', "GitHub: https://github.com/dennydai/D-Bot\nAuthor: @DennyDai");
+define('OWNER_NAME', 'YOUR_NAME');
+define('BOT_NAME', 'D_bot'); //Now For Telegram-Bot Only
+define('HELP_BEGIN', "The_Sentence_Before_Help_Command");
+define('HELP_END', "The_Sentence_After_Help_Command");
 $TAGs = array('#','/','!');
 
 
 //For Telegram-Bot
 define('TB_TOKEN', 'YOUR_TELEGRAM_BOT_TOKEN_HERE');
-define('TB_API_URL', 'https://api.telegram.org/bot'.TB_TOKEN.'/');
+define('TB_API_URL', 'https://api.telegram.org/bot'.TB_TOKEN.'/'); //DO NOT CHANGE THIS
 
 //For plugins
 define('PLUGIN_GITHUB_TOKEN', 'YOUR_GITHUB_TOKEN_HERE');
