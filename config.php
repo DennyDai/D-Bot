@@ -5,7 +5,7 @@ define('OWNER_NAME', 'YOUR_NAME');
 define('BOT_NAME', 'D_bot'); //Now For Telegram-Bot Only
 define('HELP_BEGIN', "The_Sentence_Before_Help_Command");
 define('HELP_END', "The_Sentence_After_Help_Command");
-$TAGs = array('#','/','!');
+$TAGs = array('#','/','!'); //array for commands
 
 
 //For Telegram-Bot
