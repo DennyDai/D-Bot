@@ -20,12 +20,20 @@ foreach ($TAGs as $TAG) {
         if (preg_match("/^(".preg_quote($TAG, '/').$plugin_name."|".preg_quote($TAG, '/').$plugin_name.preg_quote('@').BOT_NAME.") (.*)$/", $text, $matches)) {
             $plugin_text = $matches[2];
             $plugin_sendto = $from;
-            require_once $value;
+            if (!empty($plugin_text)){
+                require_once $value;
+            }else{
+                $BOT->msg($plugin_sendto, "Missing argument(s)");
+            }   
             break;
         }elseif (preg_match("/^(".preg_quote($TAG, '/').$plugin_name.")|(".preg_quote($TAG, '/').$plugin_name.preg_quote('@').BOT_NAME.")$/", $text)) {
             $plugin_text = $matches[2];
             $plugin_sendto = $from;
-            require_once $value;
+            if (!empty($plugin_text)){
+                require_once $value;
+            }else{
+                $BOT->msg($plugin_sendto, "Missing argument(s)");
+            }   
             break;
         }
     }
