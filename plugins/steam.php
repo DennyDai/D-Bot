@@ -1,6 +1,6 @@
 <?php
 PluginSet("Find Somebody on Steam");
-
+ini_set('user_agent','Mozilla/5.0 (Windows NT 10.0; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0');
 if (strpos($plugin_text,"@") === 0) {$plugin_text = substr($plugin_text,1);}
 $plugin_steam_steamid = json_decode(file_get_contents('http://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/?key='.PLUGIN_STEAM_KEY.'&vanityurl='.$plugin_text),true);
 if ($plugin_steam_steamid['response']['success'] == 1){
@@ -17,6 +17,8 @@ if ($plugin_steam_steamid['response']['success'] == 1){
     foreach ($plugin_steam_OwnedGames['response']['games'] as $plugin_steam_OwnedGames_Foreach) {
         $plugin_steam_OwnedGames_String .= ' '.$plugin_steam_OwnedGames_Foreach['name'].' ] [';
     }
+    
+    preg_match("/<meta property=\"description\" content=\"(.*)\">/", file_get_contents("https://steamdb.info/calculator/".$plugin_steam_steamid."/"), $plugin_steam_account_value);
 
     $msg =  "Personal Name: ".$plugin_steam_PlayerSummaries['response']['players'][0]['personaname']."\n".
             "Steam Level: ".$plugin_steam_PlayerLevel['response']['player_level']."\n".
@@ -25,7 +27,10 @@ if ($plugin_steam_steamid['response']['success'] == 1){
             //"Recently Played: ".$plugin_steam_RecentlyPlayedGames['response']['games'][0]['name']."\n".
             "Last Log Off (".date('T')."): ".date("Y-m-d H:i:s", $plugin_steam_PlayerSummaries['response']['players'][0]['lastlogoff'])."\n".
             "Profile URL: ".$plugin_steam_PlayerSummaries['response']['players'][0]['profileurl']."\n".
-            "Owned Games (".$plugin_steam_OwnedGames['response']['game_count']."): ".substr($plugin_steam_OwnedGames_String, 0, strlen($plugin_steam_OwnedGames_String)-1);
+            //"Owned Games (".$plugin_steam_OwnedGames['response']['game_count']."): ".substr($plugin_steam_OwnedGames_String, 0, strlen($plugin_steam_OwnedGames_String)-1)."\n".$_GET
+            "Owned Games (".$plugin_steam_OwnedGames['response']['game_count']."): ".$plugin_steam_PlayerSummaries['response']['players'][0]['profileurl']."games/?tab=all"."\n".
+            "Account Value: https://steamdb.info/calculator/".$plugin_steam_steamid."/"."\n".
+            "\n".str_replace("% of my games, valued at a total of ","% of those games, valued at a total of ",$plugin_steam_account_value[1]);
 }else{
     $msg = "User Not Found :(";
 }
