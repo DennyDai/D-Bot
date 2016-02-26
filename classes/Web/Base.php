@@ -3,7 +3,7 @@ class Base
 {
     public function msg($id, $msg)
     {
-        echo $msg;
+        echo "<pre>".$msg;
         return;
     }
 }
