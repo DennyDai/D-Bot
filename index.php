@@ -14,19 +14,20 @@ foreach ($load_plugins as $key => $value) {
         unset($load_plugins[$key]);
     }
 }
-foreach ($TAGs as $TAG) {
-    foreach ($load_plugins as $value) {
-        $plugin_name = substr($value, strlen(PATH.'plugins'.DIRECTORY_SEPARATOR), -4);
-        if (preg_match("/^(".preg_quote($TAG, '/').$plugin_name."|".preg_quote($TAG, '/').$plugin_name.preg_quote('@').BOT_NAME.") (.*)$/", $text, $matches)) {
-            $plugin_text = $matches[2];
-            $plugin_sendto = $from;
-            require_once $value;
-            break;
-        }elseif ($TAG.$plugin_name == $text or $TAG.$plugin_name.'@'.BOT_NAME == $text) {
-            $plugin_sendto = $from;
-            $BOT->msg($plugin_sendto, "Missing argument(s)");  
-            break;
-        }
+if (in_array(substr($text, 0, 1),$TAGs)) {
+    $TAG = substr($text, 0, 1);
+}
+foreach ($load_plugins as $value) {
+    $plugin_name = substr($value, strlen(PATH.'plugins'.DIRECTORY_SEPARATOR), -4);
+    if (preg_match("/^(".preg_quote($TAG, '/').$plugin_name."|".preg_quote($TAG, '/').$plugin_name.preg_quote('@').BOT_NAME.") (.*)$/", $text, $matches)) {
+        $plugin_text = $matches[2];
+        $plugin_sendto = $from;
+        require_once $value;
+        break;
+    }elseif ($TAG.$plugin_name == $text or $TAG.$plugin_name.'@'.BOT_NAME == $text) {
+        $plugin_sendto = $from;
+        $BOT->msg($plugin_sendto, "Missing argument(s)");  
+        break;
     }
 }
 require_once PATH.'plugins'.DIRECTORY_SEPARATOR.'help.php';
