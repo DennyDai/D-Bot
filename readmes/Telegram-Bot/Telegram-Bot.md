@@ -10,7 +10,7 @@ Based on [Telegram Bot API](https://core.telegram.org/bots)
 
 Run
 ```
-cp Telegram-Bot.php VAR_BOT.php
+cp VAR_BOT.php Telegram-Bot.php
 ```
 The url of Webhook is https://YourHost/D-Bot/Telegram-Bot.php
 
