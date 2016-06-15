@@ -47,7 +47,7 @@ function plugin_github_check($title, $check)
     }
 }
 
-if (!empty($user['login'])) {
+if (!empty($user['login']) or !empty($repo['name'])) {
     $BOT->msg($plugin_sendto, $msg);
 }else{
     $BOT->msg($plugin_sendto, 'User Not Found.');
