@@ -13,7 +13,7 @@ if ($GET['message']['chat']['id'] > 0) {
     $msgid = $GET['message']['message_id'];
 	$from = $GET['message']['chat']['id'];
 	$date = $GET['message']['date'];
-	if ((time() - $date) > 120) {
+	if ((time() - $date) > 10) {
 		$text = 'unset';
 	}else {
 		$text = $GET['message']['text'];
